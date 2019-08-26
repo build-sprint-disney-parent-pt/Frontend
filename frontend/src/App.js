@@ -1,25 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Link } from 'react-router-dom';
+
 import './App.css';
+
+//import components
+import ParentLogin from "./components/ParentLogin";
+import RequestForm from "./components/RequestForm";
+import MessageBoardList from "./components/MessageBoardList";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <nav>
+          <div className='nav-links'>
+            <Link className="links" to="/">Home</Link>
+          </div>
+
+        </nav>
       </header>
-    </div>
+      <div className="appHeader">
+      <h1>Parent Login</h1>
+      </div>
+      <div className="form">
+     <ParentLogin />
+     </div>
+     <div className="form">
+       <h1>Request Form</h1>
+     <RequestForm />
+     </div>
+     <div className="messageBoard">
+       <h1>Message Board</h1>
+     <MessageBoardList />
+     </div>
+      </div>
   );
 }
 
