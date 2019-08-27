@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 
 import './App.css';
 
 //import components
 import ParentLogin from "./components/ParentLogin";
-import RequestForm from "./components/RequestForm";
-import MessageBoardList from "./components/MessageBoardList";
-
 
 function App() {
   return (
@@ -17,7 +14,7 @@ function App() {
           <div className='nav-links'>
             <Link className="links" to="/">Home</Link>
           </div>
-
+        <Route exact path="https://wizardly-wozniak-10700b.netlify.com/" />
         </nav>
       </header>
       <div className="appHeader">
@@ -26,15 +23,7 @@ function App() {
       <div className="form">
      <ParentLogin />
      </div>
-     <div className="form">
-       <h1>Request Form</h1>
-     <RequestForm />
-     </div>
-     <div className="messageBoard">
-       <h1>Message Board</h1>
-     <MessageBoardList />
-     </div>
-      </div>
+    </div>
   );
 }
 
