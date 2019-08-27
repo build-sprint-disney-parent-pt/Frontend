@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cd475e07-33f5-4729-80c6-2e2f9f431b14/deploy-status)](https://stoic-mahavira-91f1e9.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/48faf4e5-0582-4aae-bf7c-76e3ee443a1f/deploy-status)](https://app.netlify.com/sites/stoic-mahavira-91f1e9/deploys)
 
 # Disney Parent
 
