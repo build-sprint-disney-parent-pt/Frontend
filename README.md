@@ -2,4 +2,7 @@
 
 # Frontend
 
-## Product Canvas: https://docs.google.com/document/d/1iUbRDtfe2DSVnx2NiavZnZxA0b1E9L93pLLC_femXGk/edit?usp=sharing
+## Product Management
+- [Trello Board](https://trello.com/b/9TUoShHQ/disney-parent)
+- [Project Vision Document](https://docs.google.com/document/d/1iUbRDtfe2DSVnx2NiavZnZxA0b1E9L93pLLC_femXGk/edit?usp=sharing)
+
