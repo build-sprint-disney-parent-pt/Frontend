@@ -5,6 +5,7 @@ import './App.css';
 
 //import components
 import ParentLogin from "./components/ParentLogin";
+import Links from "./components/Links";
 
 function App() {
   return (
@@ -12,9 +13,8 @@ function App() {
       <header>
         <nav>
           <div className='nav-links'>
-            <Link className="links" to="/">Home</Link>
+           <Links />
           </div>
-        <Route exact path="https://wizardly-wozniak-10700b.netlify.com/" />
         </nav>
       </header>
       <div className="appHeader">
@@ -22,6 +22,7 @@ function App() {
       </div>
       <div className="form">
      <ParentLogin />
+     
      </div>
     </div>
   );
