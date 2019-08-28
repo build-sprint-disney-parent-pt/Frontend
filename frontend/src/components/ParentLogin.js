@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Form, Field, Formik, withFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
+import Routes from "./Routes";
 
 
 
-function ParentLogin({errors, touched, status}){
+
+
+function ParentLogin({errors, touched, status, props}){
     const [auth, setAuth] = useState([]);
 
     return(
@@ -30,11 +33,13 @@ function ParentLogin({errors, touched, status}){
             {touched.password && errors.password && (
                 <p className="error">{errors.password}</p>
             )}
-            <button type="submit">Login</button>
+            <button type="submit" onClick={(prop) => props.history.push("/request")}>Login</button>
+            
 
        </Form>
-      
+           
        </div>
+       
     )
 }
 
@@ -49,7 +54,7 @@ const propsToValuesMap = withFormik({
     validationSchema: Yup.object().shape({
         userName: Yup.string().required("User name is required"),
         password: Yup.string().required("Password is required")
-    })
+    })   
 });
 
 const ParentLoginFormik = propsToValuesMap(ParentLogin);
