@@ -38,7 +38,7 @@ function App() {
      </div>
      <div className="messageBoard">
        <h1>Message Board</h1>
-     <Route path="/messageboard" component={MessageBoard}/>
+     <Route path="/message" component={MessageBoard}/>
      </div>
       </div>
   );
