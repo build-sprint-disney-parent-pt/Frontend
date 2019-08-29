@@ -43,7 +43,12 @@ nav{
 }
 
 .nav-links {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  padding-right: 15px;
  
+}
+
+.error {
+  display: inline;
+  color: red;
 }

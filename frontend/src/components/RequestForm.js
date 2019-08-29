@@ -1,12 +1,12 @@
 import React from 'react';
-import { Form, Field, Formik } from "formik";
+import { Form, Field, withFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 
-function RequestForm(){
+function RequestForm(errors, touched, status){
     return (
         <div className="requestForm">
-            <Formik>
+            
                 <Form>
                     <Field
                     component="input"
@@ -14,6 +14,10 @@ function RequestForm(){
                     name="name"
                     placeholder="Name"
                     />
+                    {touched.name && errors.name && (
+                        <p className="error">{errors.name}</p>
+                    )}
+    
                     <Field
                     component="select" className="park-select" name="parks">
                     <option>Select A Park</option>
@@ -22,6 +26,7 @@ function RequestForm(){
                     <option value="hollywoodStudios">Hollywood Studios</option>
                     <option value="epcot">Epcot</option>
                     </Field>
+                   
                     <Field
                     component="input"
                     type="text"
@@ -54,11 +59,33 @@ function RequestForm(){
                     />
                     <button type="submit">Submit</button>
                 </Form>
-            </Formik>
+          
 
 
         </div>
     )
 }
 
-export default RequestForm;
+const propsToValuesMap = withFormik({
+    mapPropsToValues({name, parks, ride, request, number, age, comments}){
+        return {
+           name: name || "",
+           parks: parks || "",
+           ride: ride || "",
+           request: request || "",
+           number: number || "", 
+           age: age || "",
+           comments: comments || ""
+        };
+    },
+
+    validationSchema: Yup.object().shape({
+       name: Yup.string().required("Parent's name is required")
+    //    parks: Yup.array().required("Park is required")
+       
+    })   
+});
+
+const RequestFormFormik = propsToValuesMap(RequestForm);
+
+export default RequestFormFormik;
