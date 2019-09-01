@@ -5,8 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Router} from "react-router-dom";
 import Routes from "./components/Routes";
-import createHistory from "history/createBrowserHistory";
-const history = createHistory();
+import { createBrowserHistory as createHistory } from 'history'
+const history: History = createHistory()
 
 ReactDOM.render(<Router history={history}><Routes /></Router>, document.getElementById('root'));
 

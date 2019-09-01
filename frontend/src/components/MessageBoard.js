@@ -6,7 +6,7 @@ function MessageBoard(props){
     console.log('props: ', props);
     return(
     <div>
-        <Card>
+         <Card>
             <CardContent>
                 <CardHeader>{props.title}</CardHeader>
                 <CardDescription>Parent ID: {props.parentId}</CardDescription>

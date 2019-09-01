@@ -33,7 +33,7 @@ function ParentLogin({errors, touched, status, props}){
             {touched.password && errors.password && (
                 <p className="error">{errors.password}</p>
             )}
-            <button type="submit" onClick={(prop) => props.history.push("/request")}>Login</button>
+            <button className="btn" type="submit">Login</button>
             
 
        </Form>
@@ -54,7 +54,15 @@ const propsToValuesMap = withFormik({
     validationSchema: Yup.object().shape({
         userName: Yup.string().required("User name is required"),
         password: Yup.string().required("Password is required")
-    })   
+    }),
+    
+    // handleSubmit(props){
+            
+    //         event.preventDefault();
+    //         this.props.userHasAuthenticated(true);
+    //         this.props.history.push('/requests');
+       
+    // }
 });
 
 const ParentLoginFormik = propsToValuesMap(ParentLogin);

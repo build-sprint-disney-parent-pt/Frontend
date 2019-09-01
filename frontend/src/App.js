@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <nav>
-          <div className='nav-links'>
+        
+          <div>
            <Links />
           </div>
-        </nav>
+    
       </header>
       <div className="appHeader">
       <h1>Parent Login</h1>

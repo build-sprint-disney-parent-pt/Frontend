@@ -8,11 +8,9 @@ import Links from "./Links";
 function RequestFormPage(){
     return(
         <div className="App">
-             <nav>
-          <div className='nav-links'>
+             <div>
            <Links />
           </div>
-        </nav>
             <div className="appHeader">
             <h1>Request Form</h1>
             <p>Submit request for parent ride swap or stroller swap here.</p>

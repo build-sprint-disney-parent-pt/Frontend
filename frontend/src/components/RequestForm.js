@@ -115,7 +115,7 @@ class RequestForm extends React.Component{
                     value = {this.state.coments}
                     onChange={this.handleChange}
                     />
-                    <button type="submit">Submit</button>
+                    <button className="btn" type="submit">Submit</button>
                 </Form>
           
 

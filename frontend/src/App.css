@@ -1,7 +1,14 @@
 @font-face{
-  font-family: "Waltograph";
-  src: url("./fonts/waltograph42.otf")
+  font-family: "Lato";
+  src: url("https://fonts.googleapis.com/css?family=Lato&display=swap")
 }
+
+body{
+  font-family: 'Lato';
+  color: #253B56;
+
+}
+
 
 .App{
   display: flex;
@@ -36,6 +43,13 @@
   margin: 1.25rem;
 }
 
+/*nav*/
+.mainNav{
+display: flex;
+box-shadow: 0 0 5px 2px #aaa;
+
+}
+
 nav{
   display: flex;
   padding: 15px;
@@ -43,12 +57,39 @@ nav{
 }
 
 .nav-links {
-  display: inline-flex;
+ 
   padding-right: 15px;
+  color: #253B56;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Lato';
  
 }
 
+.navContainer{
+  margin-top: 30px;
+}
+
+.logoContainer{ 
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.logo{
+  padding-right: 15px;
+}
+
+/*validation*/
 .error {
   display: inline;
   color: red;
+}
+
+/*button*/
+.btn{
+  background-color: #61941b;
+  color: #fff;
+  width: 130px;
+  font-size: 20px;
+  font-weight: 700; 
 }
